@@ -1,7 +1,6 @@
 fn main() {
     // 1. 接收参数
-    for arg in std::env::args()
-    {
+    for arg in std::env::args() {
         println!("{}", arg);
     }
 
