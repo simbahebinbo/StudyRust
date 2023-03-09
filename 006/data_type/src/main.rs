@@ -12,7 +12,7 @@ fn main() {
     dbg!(c);
 
     // 整型溢出
-    let mut d: i8 = 127;
+    let d: i8 = 127;
     // d = 128;
     dbg!(d);
 
