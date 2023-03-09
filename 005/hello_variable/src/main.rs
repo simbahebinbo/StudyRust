@@ -22,17 +22,24 @@ fn main() {
     let x = 5;
     // 再次赋值会报错
     // x = 15;
+    dbg!(x);
 
     // 使用mut关键字声明变量
     let mut y = 5;
+    dbg!(y);
     // 编译器不会报错
     y = 15;
+    dbg!(y);
 
     // 3. 变量遮蔽
     let m = 1;
+    dbg!(m);
     let m = 2.3;
+    dbg!(m);
     let m = "张三";
+    dbg!(m);
     let mut m = 4;
+    dbg!(m);
     let m = 5;
     dbg!(m);
 
@@ -46,7 +53,7 @@ fn main() {
 
     // 5. 静态变量
     static IP: &str = "111.111.111.111";
-    static mut NAME : &str = "zhangsan";
+    static mut NAME: &str = "zhangsan";
 
     dbg!(IP);
 
