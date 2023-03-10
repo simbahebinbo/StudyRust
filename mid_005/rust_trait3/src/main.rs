@@ -72,17 +72,17 @@ fn main() {
     let fb = f64::NAN;
     println!("fa == fb ? {}", fa == fb);
 
-    let rec1 = Rectangle {
+    let rec3 = Rectangle {
         width: 3,
         height: 5,
     };
 
-    let rec2 = Rectangle {
+    let rec4 = Rectangle {
         width: 3,
         height: 5,
     };
 
-    println!("rec1 == rec2 ? {}", rec1 == rec2);
+    println!("rec3 == rec4 ? {}", rec3 == rec4);
 
     // 相似三角形
     let tri1 = Triangle { a: 3.0, b: 4.0, c: 5.0 };
@@ -99,3 +99,4 @@ fn main() {
     };
     println!("good1 > good2 ? {}", good1 > good2);
 }
+
