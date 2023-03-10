@@ -1,7 +1,7 @@
 use std::mem;
-use std::mem::size_of_val;
 
 #[derive(Debug)]
+#[allow(dead_code)]
 enum Week {
     Mon,
     Tue,
@@ -13,6 +13,7 @@ enum Week {
 }
 
 #[derive(Debug)]
+#[allow(dead_code)]
 enum Color {
     // 定义色值，参数分别表示16进制颜色代码，R，G，B
     White(String, u8, u8, u8),
@@ -52,10 +53,8 @@ fn main() {
     // Red
     // Black { code: "#000000", r: 0, g: 0, b: 0 }
 
-    unsafe {
-        let mem = mem::size_of::<Color>();
-        let align = mem::align_of::<Color>();
-        println!("内存：{}， 对齐：{}", mem, align);
-    }
+    let mem = mem::size_of::<Color>();
+    let align = mem::align_of::<Color>();
+    println!("内存：{}， 对齐：{}", mem, align);
 }
 
