@@ -15,12 +15,11 @@ fn main() {
     say_hello_ptr();
 
     // 函数赋值，类型推断
-    let other_say_hello_ptr= say_hello;
+    let other_say_hello_ptr = say_hello;
     other_say_hello_ptr();
 
     // 原函数调用
     say_hello()
-
 }
 
 fn say_hello() {
