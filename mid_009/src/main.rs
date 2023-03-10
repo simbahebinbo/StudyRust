@@ -22,7 +22,14 @@ fn main() {
     println!("m = {}", m);
 
     let a = vec![String::from("hello"), String::from("study"), String::from("rust")];
+    // 让渡所有权
     let b = a;
+    // a 变为无法访问，下面的代码将会报错
+    // println!("{:?}", a);
+
+    println!("{:?}", b);
     // 下面的语句会报错
     // let c = a;
 }
+
+
