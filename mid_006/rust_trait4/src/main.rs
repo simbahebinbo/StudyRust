@@ -1,4 +1,5 @@
 #[derive(Default, Debug)]
+#[allow(dead_code)]
 struct Test1 {
     a: i32,
     b: f64,
@@ -9,6 +10,7 @@ struct Test1 {
 }
 
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Test2 {
     a: i32,
     b: f64,
@@ -27,6 +29,7 @@ impl Default for Test2 {
 }
 
 /// 显式标明
+#[allow(dead_code)]
 struct MySized<T: ?Sized> {
     value: T,
 }
@@ -54,3 +57,4 @@ fn main() {
     //     c: true,
     // }
 }
+
