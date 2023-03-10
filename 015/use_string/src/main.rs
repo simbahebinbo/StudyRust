@@ -45,7 +45,6 @@ fn main() {
     // replacen
     let string_replacen = "I like rust. Learning rust is my favorite!";
     let new_string_replacen = string_replacen.replacen("rust", "RUST", 1);
-
     dbg!(new_string_replacen);
 
     // replace_range
@@ -80,7 +79,7 @@ fn main() {
 
     // truncate
     let mut string_truncate = String::from("测试truncate");
-    string_truncate.truncate(3);
+    string_truncate.truncate(6);
     dbg!(string_truncate);
 
     // clear
