@@ -28,3 +28,4 @@ fn main() {
 fn add_function(a: i32, b: i32) -> i32 {
     a + b
 }
+
