@@ -32,9 +32,10 @@ fn main() {
     let vec_adapter = vec![1, 3, 5, 7, 9];
     // 1. take
     let take_result = vec_adapter.iter().take(3);
-    dbg!(take_result);
+    let _ = dbg!(take_result);
+
     // 2. filter
-    let filter_result: Vec<i32> = vec_adapter.iter().map(|x| *x + 2).filter(|x| *x % 3 == 0).collect();
+    let filter_result: Vec<i32> = vec_adapter.iter().map(|x| *x + 3).filter(|x| *x % 3 == 0).collect();
     dbg!(filter_result);
 
     //3. rev
