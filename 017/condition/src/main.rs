@@ -4,19 +4,21 @@ fn main() {
     let week: u32 = 0;
 
     if week % 7 == 0 {
-        println!("您选择的是周日！")
+        println!("您选择的是周日！");
     } else if week % 7 == 1 {
-        println!("您选择的是周一！")
+        println!("您选择的是周一！");
     } else if week % 7 == 2 {
-        println!("您选择的是周二！")
+        println!("您选择的是周二！");
     } else if week % 7 == 3 {
-        println!("您选择的是周三！")
+        println!("您选择的是周三！");
     } else if week % 7 == 4 {
-        println!("您选择的是周四！")
+        println!("您选择的是周四！");
     } else if week % 7 == 5 {
-        println!("您选择的是周五！")
+        println!("您选择的是周五！");
+    } else if week % 7 == 6 {
+        println!("您选择的是周六！");
     } else {
-        println!("您选择的是周六！")
+        println!("未知！");
     }
 
     println!("\n*****************2、循环(loop)************************");
@@ -107,3 +109,4 @@ fn main() {
         print!("{} ", value);
     }
 }
+
