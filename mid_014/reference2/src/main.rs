@@ -2,13 +2,13 @@ fn main() {
     // 1. println!
     let mut m = String::from("rust");
     // 打印 m 和 n(没有解引用)
-    println!("m = {}", m);
+    println!("{:?}", m);
     // dbg!将会失去所有权
     // dbg!(m);
     // m 追加字符串(没有失去所有权)
     m.push_str(" is easy.");
     // 打印 m
-    println!("{}", m);
+    println!("{:?}", m);
 
     // 2. 引用的引用
     let a: i32 = 4;
@@ -45,17 +45,17 @@ fn main() {
     // 4. 对表达式的引用
     // 4.1.普通表达式
     let x = &(8 + 78);
-    println!("x = {}", x);
+    println!("{:?}", x);
 
     // 4.2 闭包
     let f = |h| h + 1;
     let y = &f(1);
-    println!("y = {}", y);
+    println!("{:?}", y);
 
     // 4.3 函数
     fn func_test(a: i32) -> i32 {
         return a + 2;
     }
     let z = &func_test(3);
-    println!("y = {}", z);
+    println!("{:?}", z);
 }
