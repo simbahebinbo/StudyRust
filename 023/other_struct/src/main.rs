@@ -11,12 +11,15 @@ fn main() {
 
     //2. 类基元结构体
     // 声明
+    #[derive(Debug)]
     struct UnitStruct;
     // 创建
     let us = UnitStruct;
-
+    dbg!(us);
 
     // 2. 结构体
+    #[derive(Debug)]
+    #[allow(dead_code)]
     struct Salary {
         // 表示月薪
         monthly: Vec<u32>,
@@ -25,16 +28,16 @@ fn main() {
     }
     // 我的薪资每个月，10,000元RMB，共12个月
     // 另外我的年终奖是 66,666元
-    let mut my_salary = Salary {
+    let my_salary = Salary {
         monthly: vec![10_000; 12],
         bonus: 66_666,
     };
+    dbg!(my_salary);
 
     // 总结
     #[derive(Debug)]
     struct ASCII(Vec<u8>);
 
-    let ascii_demo = ASCII(vec![0,0,0,0,0,0,0,1]);
+    let ascii_demo = ASCII(vec![0, 0, 0, 0, 0, 0, 0, 1]);
     dbg!(ascii_demo);
-
 }
