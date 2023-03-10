@@ -1,9 +1,9 @@
 use crate::graph_trait::Graph;
 
 /// 圆
-struct Circle {
+pub struct Circle {
     // 半径
-    radius: f64,
+    pub(crate) radius: f64,
 }
 
 impl Graph for Circle {

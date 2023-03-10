@@ -1,9 +1,10 @@
+use crate::circle::Circle;
+use crate::graph_trait::Graph;
+use crate::rectangle::Rectangle;
+
 mod graph_trait;
 mod rectangle;
 mod circle;
-
-use crate::graph_trait::Graph;
-use crate::rectangle::Rectangle;
 
 /// 动物 trait
 trait Animal {
@@ -12,11 +13,13 @@ trait Animal {
 }
 
 /// 狗
+#[allow(dead_code)]
 struct Dog {
     name: String,
 }
 
-/// 鱼
+/// 猫
+#[allow(dead_code)]
 struct Cat {
     name: String,
 }
@@ -67,6 +70,12 @@ fn main() {
         height: 2.0,
     };
     println!("rec 的面积为：{}", rec.area());
+
+    let cir = Circle {
+        radius: 6.0,
+    };
+    println!("cir 的面积为：{}", cir.area());
+
     // **********************扩展 END************************
 
 
@@ -78,9 +87,9 @@ fn main() {
     speak(a);
 
     // 多 trait同时实现
-    printMulti(dog);
-    // 下面的代码错误
-    // printMulti(cat);
+    print_multi(dog);
+    // 下面的代码错误    Cat 没有实现 Test
+    // print_multi(cat);
 }
 
 /// impl trait 作为参数
@@ -101,7 +110,7 @@ impl Test for Dog {
 }
 
 /// 打印同时实现 Test 和 Animal Trait的方法
-fn printMulti(p: impl Test + Animal) {
+fn print_multi(p: impl Test + Animal) {
     p.make_sound();
     p.test();
 }
