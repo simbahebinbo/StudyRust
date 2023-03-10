@@ -57,6 +57,4 @@ fn main() {
     let s2 = s1.to_string();
     dbg!(s1);
     dbg!(s2);
-
-
 }
