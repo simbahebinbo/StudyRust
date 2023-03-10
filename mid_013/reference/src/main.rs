@@ -2,7 +2,7 @@ fn main() {
     // 1.共享引用
     // String类型
     let m = String::from("rust");
-    // 引用： &m 表示 对x的共享引用
+    // 引用： &m 表示 对m的共享引用
     let n = &m;
     println!("m = {}, n = {}", m, *n);
 
@@ -22,8 +22,6 @@ fn main() {
     let mut a = String::from("rust");
     (&mut a).push_str(" is so easy!");
     println!("{}", a);
-
-
 }
 
 
