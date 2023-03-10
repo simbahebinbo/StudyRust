@@ -24,7 +24,7 @@ impl Person {
     }
 
     // 关联函数
-    fn to_string(person: Person) -> String {
+    fn convert_to_string(person: Person) -> String {
         return format!("Person {{ name: {}, age: {} }}", person.get_name(), person.get_age());
     }
 }
@@ -65,6 +65,7 @@ impl<T> Queue<T> {
     }
 }
 
+
 fn main() {
     let mut person = Person {
         name: String::from("test"),
@@ -79,7 +80,7 @@ fn main() {
     println!("修改后：name: {}, age: {}", person.get_name(), person.get_age());
 
     // 通过关联函数输出
-    println!("{}", Person::to_string(person));
+    println!("{}", Person::convert_to_string(person));
 
     // 输出结果：
     // 修改前：name: test, age: 8
@@ -102,3 +103,4 @@ fn main() {
     // 队列的长度：3
     // 队列的长度：1
 }
+
