@@ -1,5 +1,4 @@
 fn main() {
-
     // ********************1、Clone***********************
 
     let student1 = Student { name: String::from("xiaoming") };
@@ -28,11 +27,13 @@ fn print_name(name: String) {
 }
 
 #[derive(Debug, Clone)]
+#[allow(dead_code)]
 struct Student {
     name: String,
 }
 
 #[derive(Debug, Copy, Clone)]
+#[allow(dead_code)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -45,3 +46,4 @@ struct Rectangle {
 //     b: u32,
 //     c: String,
 // }
+
