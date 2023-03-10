@@ -73,7 +73,7 @@ fn main() {
     println!("vec_capacity 填充5个元素后的长度为 {}", vec_capacity.len());
     println!("vec_capacity 填充5个元素后的容量为 {}", vec_capacity.capacity());
 
-    // 填充第6个元素
+    // 填充第6个元素  自动扩容
     vec_capacity.push(5);
 
     println!("vec_capacity 填充6个元素后的长度为 {}", vec_capacity.len());
@@ -83,8 +83,8 @@ fn main() {
     let mut vec_default: Vec<i32> = Vec::new();
     println!("vec_default 的长度为 {}", vec_default.len());
     println!("vec_default 的容量为 {}", vec_default.capacity());
+    // 自动扩容
     vec_default.push(1);
     println!("vec_default 添加一个元素的长度为 {}", vec_default.len());
     println!("vec_default 添加一个元素的容量为 {}", vec_default.capacity());
-
 }
