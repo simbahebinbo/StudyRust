@@ -1,6 +1,3 @@
-use std::fmt::Arguments;
-use std::io::{IoSlice, Write};
-
 fn main() {
     // 1. 引用作为函数/方法参数
     let mut a = String::from("hello");
@@ -35,6 +32,7 @@ fn get_self(s: &String) -> &String {
 }
 
 // fn operate_string(a: &String) {
-    // 下面的代码是错误的
-    // let x = *a;
+// 下面的代码是错误的
+// let x = *a;
 // }
+
