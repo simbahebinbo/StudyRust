@@ -35,7 +35,7 @@ fn main() {
 
     // 除法
     let x1 = divider(5.0, 2.0);
-    let x2 =  divider(5.0, 0.0);
+    let x2 = divider(5.0, 0.0);
     println!("{:?}", x1);
     println!("{:?}", x2);
 }
@@ -44,7 +44,7 @@ fn print(a: i32, b: i32) -> i32 {
     return a + b;
 }
 
-fn print_generic<T>(a: T, b: T) -> T {
+fn print_generic<T>(a: T, _b: T) -> T {
     return a;
 }
 
@@ -56,3 +56,6 @@ fn divider(a: f64, b: f64) -> Option<f64> {
         Some(a / b)
     }
 }
+
+
+
