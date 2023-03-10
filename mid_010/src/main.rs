@@ -35,6 +35,7 @@ fn main() {
         // 下面的代码 是错误的
         // print_dance(name);
     }
+    println!("{}", name);
 
     // 【匹配】
     let x = 3 % 2;
