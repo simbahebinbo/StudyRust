@@ -2,7 +2,7 @@ fn main() {
     println!("[main start]");
     let name = String::from("zhangsan");
     let age = 16;
-    let mut s = Student {
+    let s = Student {
         name,
         age,
     };
@@ -46,6 +46,7 @@ impl Drop for Student {
     }
 }
 
+#[allow(dead_code)]
 struct Dog {
     // 每条狗都有一个唯一 id
     id: i32,
@@ -55,3 +56,5 @@ struct Dog {
 impl Drop for Dog {
     fn drop(&mut self) {}
 }
+
+
