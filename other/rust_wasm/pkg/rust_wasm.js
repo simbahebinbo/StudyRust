@@ -1,11 +1,10 @@
-
 let wasm;
 
 /**
-* @param {number} a
-* @param {number} b
-* @returns {number}
-*/
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ */
 export function sum(a, b) {
     const ret = wasm.sum(a, b);
     return ret;
@@ -34,7 +33,7 @@ async function load(module, imports) {
         const instance = await WebAssembly.instantiate(module, imports);
 
         if (instance instanceof WebAssembly.Instance) {
-            return { instance, module };
+            return {instance, module};
 
         } else {
             return instance;
@@ -56,8 +55,7 @@ function initMemory(imports, maybe_memory) {
 function finalizeInit(instance, module) {
     wasm = instance.exports;
     init.__wbindgen_wasm_module = module;
-
-
+    
     return wasm;
 }
 
@@ -84,10 +82,12 @@ async function init(input) {
 
     initMemory(imports);
 
-    const { instance, module } = await load(await input, imports);
+    const {instance, module} = await load(await input, imports);
 
     return finalizeInit(instance, module);
 }
 
-export { initSync }
+export {initSync}
 export default init;
+
+
