@@ -40,6 +40,7 @@ fn main() {
 
 /// 学生1 结构体
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Student1 {
     // 学号
     id: u32,
@@ -53,6 +54,7 @@ struct Student1 {
 
 /// 学生2 结构体
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Student2 {
     // 学号
     id: u32,
