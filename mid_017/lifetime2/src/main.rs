@@ -33,10 +33,12 @@ fn main() {
 }
 
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Student<'a> {
     name: &'a str,
     age: &'a i32,
 }
+
 
 // 以下代码不推荐
 // #[derive(Debug)]
@@ -72,3 +74,5 @@ impl Example {
         None
     }
 }
+
+
