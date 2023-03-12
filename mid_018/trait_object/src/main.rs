@@ -62,10 +62,9 @@ fn main() {
     let shape: &dyn Shape = &rectangle;
     let rec_ref: &Rectangle = &rectangle;
 
-    // println!("[circle] area = {}, perimeter = {}", circle.area(), circle.perimeter());
-    // println!("[rectangle] area = {}, perimeter = {}", rectangle.area(), rectangle.perimeter());
+    println!("[circle] area = {}, perimeter = {}", circle.area(), circle.perimeter());
+    println!("[rectangle] area = {}, perimeter = {}", rectangle.area(), rectangle.perimeter());
     println!("[shape] area = {}, perimeter = {}", shape.area(), shape.perimeter());
-
     println!("[rec_ref] area = {}, perimeter = {}", rec_ref.area(), rec_ref.perimeter());
 
     // 2.impl trait 和 trait object 的区别
@@ -85,3 +84,4 @@ fn create_circle_impl_trait() -> impl Shape {
 fn print_shape(shape: impl Shape) {
     println!("[print_shape] area = {}, perimeter = {}", shape.area(), shape.perimeter());
 }
+
