@@ -15,7 +15,6 @@ fn main() {
         println!("{}", *a);
     }
 
-
     // 函数签名中的生命期标注
     let name: &str = "zhangsan";
     test_life(name);
@@ -64,6 +63,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 }
 
 
+#[allow(dead_code)]
 fn test(name: &str) -> &str {
     println!("{}", name);
     return name;
@@ -73,6 +73,4 @@ fn test_life<'_a>(name: &'_a str) -> &'_a str {
     println!("{}", name);
     return name;
 }
-
-
 
