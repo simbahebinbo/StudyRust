@@ -7,17 +7,19 @@
 
 <script type="module">
     import init, {alert_by_rust, dom, test_setTimeout} from "./pkg/rust_wasm_dom.js";
-    
+
     init().then(() => {
         // alert_by_rust("hello world!")
         dom()
     });
 
-    
+
 </script>
 
 <body>
-    <!-- 声明的div节点 -->
-    <div id="test"></div>
+<!-- 声明的div节点 -->
+<div id="test"></div>
 </body>
 </html>
+
+

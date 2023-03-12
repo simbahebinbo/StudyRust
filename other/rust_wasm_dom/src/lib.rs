@@ -16,13 +16,13 @@ pub fn alert_by_rust(msg: &str) {
 
 /// 调用 setTimeout
 #[wasm_bindgen]
-pub fn test_setTimeout() {
+pub fn test_set_timeout() {
     // 声明一个函数
     let func = Function::new_no_args(r#"alert("hello wasm")"#);
     // 获取 window
     let window = window().unwrap();
     // window 调用setimeout
-    window.set_timeout_with_callback_and_timeout_and_arguments_0(&func, 1000);
+    window.set_timeout_with_callback_and_timeout_and_arguments_0(&func, 1000).map_err(|err| println!("{:?}", err)).ok();
 }
 
 
@@ -39,5 +39,6 @@ pub fn dom() {
     test_node.set_text_content(Some("Rust 操作 Dom"));
 
     // 最后再来个alert
-    window.alert_with_message("我是通过 web_sys 生成的");
+    window.alert_with_message("我是通过 web_sys 生成的").map_err(|err| println!("{:?}", err)).ok();
 }
+
