@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use reqwest::header::HeaderMap;
 
-use crate::dy_model::{DouYinResult};
+use crate::dy_model::DouYinResult;
 
 mod dy_model;
 
@@ -129,5 +129,4 @@ fn create_default_client() -> reqwest::Client {
     let agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62";
     return reqwest::Client::builder().default_headers(headers).connect_timeout(Duration::from_secs(10)).user_agent(agent).build().unwrap();
 }
-
 
